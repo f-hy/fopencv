@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION ${CMAKE_VERSION})
+project(${DG_LIB})
+aux_source_directory(. SRC_LIST)
+#遍历SRC_LIST，为每个文件生成一个可执行文件
+foreach(file ${SRC_LIST})
+    get_filename_component(file_name ${file} NAME_WE)
+    set(APP_NAME "${PROJECT_NAME}_${file_name}")
+    add_executable(${APP_NAME} ${file})
+    target_link_libraries(${APP_NAME} PRIVATE ${DG_LIB})
+endforeach()
