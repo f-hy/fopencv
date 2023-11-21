@@ -4,7 +4,7 @@ using namespace std;
 using namespace cv;
 #define dg "E:/data/courses/dg/"
 #define dgdata dg "static/"
-Mat img = imread(dgdata "9.11.png", IMREAD_GRAYSCALE);  // IMREAD_GRAYSCALE
+Mat img = imread(dgdata "9_11.png", IMREAD_GRAYSCALE);  // IMREAD_GRAYSCALE
 int main() {
   // Perform the Fourier Transform
   Mat imgFreq;

@@ -1,14 +1,10 @@
-#include <iostream>
+#include<iostream>
 #include<opencv2/opencv.hpp>
 #include<opencv2/cudaimgproc.hpp>
-#include "dg.h"
 using namespace std;
 using namespace cv;
-// #define dg "E:/data/courses/dg/"
-// #define dgdata dg"static/"
-// #define imgpath dgdata"9.11.png"
-
 int main() {
+  cout<<cuda::getCudaEnabledDeviceCount()<<endl;
   const String& s ="E:/apple.jpg";
   Mat img = imread(s);
   if(img.empty()) {
@@ -26,6 +22,5 @@ int main() {
   waitKey(0);
   destroyAllWindows();
   cout << "hello";
-
   return 0;
 }

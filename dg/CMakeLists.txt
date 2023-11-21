@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION ${CMAKE_VERSION})
 project(${DG_LIB})
-set(LIBRARY_OUTPUT_PATH ${LIB_PATH})
 aux_source_directory(. SRC_LIST)
 #file(GLOB SRC_LIST "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 add_library(${PROJECT_NAME} SHARED ${SRC_LIST})

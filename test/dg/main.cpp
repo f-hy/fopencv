@@ -5,7 +5,7 @@ using namespace cv;
 #define dg "E:/data/courses/dg/"
 #define dgdata dg"static/"
 int main() {
-   Mat img = imread(dgdata"9.11.png");
+   Mat img = imread(dgdata"9_11.png");
    imshow("apple", img);
    waitKey(0);
    destroyAllWindows();
